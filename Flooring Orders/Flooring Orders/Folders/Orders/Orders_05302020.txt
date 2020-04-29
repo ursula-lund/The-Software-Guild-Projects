@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,tim bill,tx,4.45,tile,504,3.50,1764.00,4.15,171.57,4027.17

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+	Name: Ursula Lundberg Grygelko
+	Date Created: 01/24/20
+	Most Recent Revision:
+-->
+<html lang="en">
+	<meta charset="utf-8">
+	
+	<head>
+		<title>Contact Us</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+			<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+		body {
+			margin: auto;
+			max-width: 1000px;
+			font-family: helvetica, sans-serif;
+			background-color: #fef9ff;
+			
+		input[type=submit]:hover {
+			background-color: #f2eded;
+			color: #546a7b;
+		}
+		
+		textarea {
+			width: 600px;
+			height: 300px;
+		
+		}
+		label {
+			font-weight: bold;
+		}
+		.nav-pills li{
+			margin-left: 5px;
+		}
+
+		</style>
+		
+		<noscript>
+			<div class="error message">
+				Site best viewed with JavaScript <strong>enabled</strong>.
+			</div>
+		</noscript>
+		
+		<script type="text/javascript">
+			function validate_form ( )
+			{
+				valid = true;
+			if ( document.value == "" )
+			{
+			alert ( "Please fill in the 'Your Name' box." );
+			valid = false;
+			}
+
+			return valid;
+			}
+		
+		</script>
+	</head>
+	
+	<body>
+		<header>
+			<h1>Ursie's Bar & Grill</h1>
+		</header>
+
+		<nav>
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li><a href="home.html"><i class="glyphicon glyphicon-home"></i></a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="contactUs.html">Contact Us </a></li>
+			</ul>
+			</div>	
+		</nav>
+		
+	<form action="submit.html" method="POST">
+		<div class="form-group">
+			<label for="Name">Name:</label><br />
+			<input type="text" class="form-control" id="Name" name="Name"><br />
+		</div>
+		<div class="form-group">
+			<label for="Email">Email:</label><br />
+			<input type="text" class="form-control" id="Email" name="Email"><br />
+		</div>
+		<div class="form-group">
+			<label for="Phone">Phone:</label><br />
+			<input type="text" class="form-control" id="Phone" name="Phone"><br />
+		</div>
+		
+		<!--dropdown -->
+		
+		<div class="container">
+			<p>Reason for Inquiry</p>
+			<div class="dropdown">
+		
+			<select id="contact" name="contact">
+				<option value="default">Catering</option>
+				<option value="privateParty">Private Party</option>
+				<option value="Feedback">Feedback</option>
+				<option value="Other">Other</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<br><label for="info">Additional Information:</label><br />
+			<textarea class="info" id="info"></textarea>
+		</div>
+		
+		
+		<div class="container">	
+			<p>Have you been to the restauraunt?<p>
+		
+			<label class="radio-inline">
+				<input type="radio" name="answer" value="NO" checked />  No
+			</label>
+		
+			<label class="radio-inline">		
+				<input type="radio" name="answer" value="YES" />Yes
+			</label>
+		
+		</div>
+		
+		
+		<div class="container">
+		<p>Best days to contact you:</p>
+			
+				<label class="checkbox-inline"> 
+					<input type="checkbox" name="contactUs" value="M" />M<br />
+				</label>
+				<label class="checkbox-inline"> 
+					<input type="checkbox" name="contactUs" value="T" />T<br />
+				</label>
+				<label class="checkbox-inline"> 
+					<input type="checkbox" name="contactUs" value="W" />W<br />
+				</label>
+				<label class="checkbox-inline"> 
+					<input type="checkbox" name="contactUs" value="Th" />Th<br />
+				</label>
+				<label class="checkbox-inline"> 
+					<input type="checkbox" name="contactUs" value="F" />F<br />
+				</label>
+			
+		</div>
+			
+		<button type="button" class="btn btn-default">Send Request</button>
+	</form>	
+		
+		<footer>
+		<p>1960 Diner St, Minneapolis, MN, 55225</p>
+		<p>(369) 421-5765</p>
+	</footer>
+		<hr />
+		<p >&copy; 2020 Ursula Lundberg. All rights reserved.</p>
+		<hr />
+		
+	</body>
+	
+</html>

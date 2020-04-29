@@ -1,0 +1,15 @@
+com\mycompany\bullscows\dao\GameTemplateDao.class
+com\mycompany\bullscows\dao\GuessDaoException.class
+com\mycompany\bullscows\dao\GuessDao.class
+com\mycompany\bullscows\App.class
+com\mycompany\bullscows\dao\GameTemplateDao$GameMapper.class
+com\mycompany\bullscows\Controller\BullsCowsController.class
+com\mycompany\bullscows\dao\GameDao.class
+com\mycompany\bullscows\dao\GuessTemplateDao$GuessMapper.class
+com\mycompany\bullscows\DTO\Guess.class
+com\mycompany\bullscows\dao\GameDaoException.class
+com\mycompany\bullscows\App$TestApplicationConfiguration.class
+com\mycompany\bullscows\dao\GuessTemplateDao.class
+com\mycompany\bullscows\Service\InvalidGuessException.class
+com\mycompany\bullscows\Service\BullsCowsService.class
+com\mycompany\bullscows\DTO\Game.class

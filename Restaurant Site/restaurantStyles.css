@@ -1,0 +1,46 @@
+/*
+Creator: Ursula Lundberg
+Date created: 01/24/20
+Date las Modified: 01/26/20
+*/
+
+body {
+	background-color: #FEFFFE;
+	font-family: helvetica, sans-serif;
+	margin: auto;
+	max-width: 900px;
+}
+		
+		
+header, footer {
+	background-color: #8d818c;
+	font-family: 'fantasy', helvetica; 
+	background-font: #1c053a;
+	text-align: center;
+	color: #E9EBF8;
+	padding: 20px 10px 10px 10px
+}
+	nav  {
+		background-color: #E9EBF8;
+		color: #b4b8c5;
+		padding: 30px 20px 40px 20px
+		text-align: center;
+		display: block;
+		margin: 20px;
+		
+}
+nav a:hover {
+    font-weight:bold; 
+	  text-decoration: none
+}
+nav a:active {
+     text-decoration: none
+}
+nav a:visited {
+    color: #260399; 
+	text-decoration: none
+}
+.nav-pills li{
+			margin-left: 5px;
+		}
+		

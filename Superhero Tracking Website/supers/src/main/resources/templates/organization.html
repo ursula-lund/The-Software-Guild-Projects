@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <title>Super Sightings</title>
+    </head>
+
+    <body>
+
+
+        <div class="container">
+
+            <div class="navbar">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link active" href="organization">
+                            Organizations
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="super">
+                            Supers
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="sighting">
+                            Sightings
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="power">
+                            Powers
+                        </a>        
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="location">
+                            Locations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+     
+
+
+        <div class="row m-4">
+            <div class="col text-center m-3">
+                <table class="table" >
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Description</th>          
+                            <th>Address</th> 
+                            <th>Phone</th> 
+                            <th>Known Members</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="organization : ${organizations}">
+
+                            <td><a th:href="@{/viewOrganization(id=${organization.organizationId})}" th:text="${organization.orgName}">Organization</a></td>
+                            <td th:text="${organization.description}">Description</td>
+                            <td th:text="${organization.address}">Address</td>
+                            <td th:text="${organization.phone}">Phone</td>
+                            <th>
+                                <ul style="list-style-type:none">
+                                        <li th:each="super : ${organization.supersList}">
+                                            <a th:text="${super.superName}" th:href="@{/viewSuper(id=${super.superId})}"></a>
+                                        </li>
+                                    </ul>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+             <div align ="right">
+                <a class="nav-link" href="addOrganization"><h2>Add Organization</h2></a>
+        </div>
+
+
+
+   </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" 
+        integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
+

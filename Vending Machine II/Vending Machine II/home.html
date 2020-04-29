@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendingMachine.css">
+    </head>
+
+<body>
+    <h1 style="text-align: center;">Ursula's Vending Machine</h1>
+    <hr />
+
+
+    <div id="mainDiv" class="row">
+
+        <div id="itemButtonsDiv" class="col-md-8">
+        </div>
+
+
+        <div id="userEntry" class="col-md-4">
+
+            <div id="totalIn" style="text-align: center;">
+                <h2>Total $ In:</h2>
+                <input id="userMoney" type="number.toPrecision(2)" min= "0.05" step="0.05" readonly="readonly" placeholder="0.00$" />
+                <div id="moneyButtons">
+
+                    <button id="dollar"  type="button" onClick="addMoney( 1.00 )">Add Dollar</button>
+                    <button id="quarter" onClick="addMoney( .25 )">Add Quarter</button>
+                    <button id="dime"  type="button" onClick="addMoney( .10 )">Add Dime</button>
+                    <button id="nickel" type="button" onClick="addMoney( .05 )">Add Nickel</button>
+                </div>
+            </div>
+
+            <hr />
+
+            <div id="messages" style="text-align: center;">
+                <h2>Messages</h2>
+                <input readonly="text" size="40" id="msg"/><br>
+                <label for="item">Item: </label>
+                <input type="text" id="item" size="5"/><br>
+                <button id="makePurchase" type="button" onClick="makePurchase()">Make Purchase</button>
+            </div>
+
+            <hr />
+
+            <div id="changeReturn" style="text-align: center;">
+                <h2 style="text-align: center;">Change</h2>
+               <input id="change" readonly="readonly" size="40"/><br>  
+                <button id="returnChange" type="button" onClick="returnChange()">Change Return</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>

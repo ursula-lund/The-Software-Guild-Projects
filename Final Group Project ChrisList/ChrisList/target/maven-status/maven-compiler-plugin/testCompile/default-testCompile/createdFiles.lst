@@ -1,0 +1,4 @@
+com\sg\ChrisList\services\UserServiceTest.class
+com\sg\ChrisList\daos\UserDaoDBTest.class
+com\sg\ChrisList\daos\KeywordDaoDBTest.class
+com\sg\ChrisList\daos\ListingDaoDBTest.class

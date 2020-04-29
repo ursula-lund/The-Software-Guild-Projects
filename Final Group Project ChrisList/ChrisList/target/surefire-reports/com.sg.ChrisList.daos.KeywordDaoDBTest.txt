@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.ChrisList.daos.KeywordDaoDBTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.369 s - in com.sg.ChrisList.daos.KeywordDaoDBTest

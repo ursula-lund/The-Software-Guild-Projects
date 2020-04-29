@@ -1,0 +1,7 @@
+name, price, qty
+Kit Kats,2.75,8
+Chocolate Coffee Beans,3.40,4
+Mint Gum,1.10,0
+Potatoes,3.45,1
+Cheese Balls,2.40,2
+Apples,3.45,2

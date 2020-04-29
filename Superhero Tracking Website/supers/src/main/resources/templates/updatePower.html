@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Super Sightings</title>
+  </head>
+    
+<body>
+    
+            
+        <div class="container">
+
+
+
+            <hr/>
+            <div class="navbar">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="home">
+                            Home
+                        </a>
+                    </li>
+                  
+                      <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="organization">
+                            Organizations
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="super">
+                            Supers
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="sighting">
+                           Sightings
+                        </a>
+                    </li>
+                   <li role="presentation" class="nav-item">
+                        <a class="nav-link active" href="power">
+                           Powers
+                        </a>        
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="location">
+                            Locations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-3 text-center m-3">
+                <span class="h3">Edit Location</span>
+            </div>
+
+            <div class="col-7 text-center m-3">
+                <form method="POST" action="updatePower">
+                    <div class="form-group row">
+                        <label for="powerName" class="col-3 col-form-label">Power</label>
+                        <div class="col-9">
+                            <input th:value="${power.powerName}" type="text" name="powerName" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="powerDesc" class="col-3 col-form-label">Power Summary</label>
+                        <div class="col-9">
+                            <input th:value="${power.powerDesc}" type="text" name="powerDesc" class="form-control"/>
+                        </div>
+                    </div>                  
+                    <input type="hidden" name="id" th:value="${power.powerId}"/>
+                    <button type="submit">Update Power</button>
+                </form>
+            </div>
+
+        </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" 
+        integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.ChrisList.daos.ListingDaoDBTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 2.063 s <<< FAILURE! - in com.sg.ChrisList.daos.ListingDaoDBTest
+testGetListingsByKeywordGoldenPath  Time elapsed: 0.31 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.daos.ListingDaoDBTest.testGetListingsByKeywordGoldenPath(ListingDaoDBTest.java:163)
+
+testGetListingsByConditionLikeNew  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.daos.ListingDaoDBTest.testGetListingsByConditionLikeNew(ListingDaoDBTest.java:114)
+
+testGetListingsByConditionUsed  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.daos.ListingDaoDBTest.testGetListingsByConditionUsed(ListingDaoDBTest.java:86)
+
+testGetListingsByConditionNew  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.daos.ListingDaoDBTest.testGetListingsByConditionNew(ListingDaoDBTest.java:131)
+

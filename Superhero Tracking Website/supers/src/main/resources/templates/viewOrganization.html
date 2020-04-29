@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <title>Super Sightings</title>
+    </head>
+
+    <body>
+
+
+        <div class="container">
+
+            <div class="navbar">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="organization">
+                            Organizations
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="super">
+                            Supers
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="sighting">
+                            Sightings
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="power">
+                            Powers
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link  active" href="location">
+                            Locations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h2><em>Organization Info</em></h2>
+            <h1 th:text="${organization.orgName}"></h1>
+            <hr>
+
+                <div>
+                    <h4>Address</h4>
+                    <p th:text="${organization.address}"></p><br/>
+                    <h4>Phone</h4>
+                    <p th:text="${organization.phone}">Phone Number</p><br/>
+                    <h4>Known Info</h4>
+                    <p th:text="${organization.description}" >Known Info</p></br>
+                    <h4>Known Members</h4>
+                    <ul style="list-style-type: none">
+                        <li th:each="super : ${organization.supersList}">
+                            <a th:text="${super.superName}" th:href="@{/viewSuper(id=${super.superId})}"></a>
+                        </li>
+                    </ul>
+                   
+
+
+                    <hr/>
+
+
+                </div>
+
+
+                <div class="container">
+                     <a class="nav-link" href="addOrganization"><h5>Report New Organization</h5></a>
+                    <a class="nav-link" th:href="@{/updateOrganization(id=${organization.organizationId})}"><h5>Edit Organization Info</h5></a>
+                    <a class="nav-link" href="#" th:href="@{/deleteOrganization(id=${organization.organizationId})}"><h5>Destroy Them</h5></a>
+                </div>
+                <br/>
+                <br/>
+
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" 
+        integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+

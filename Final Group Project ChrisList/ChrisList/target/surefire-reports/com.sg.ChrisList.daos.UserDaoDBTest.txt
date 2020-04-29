@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.ChrisList.daos.UserDaoDBTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.135 s <<< FAILURE! - in com.sg.ChrisList.daos.UserDaoDBTest
+getAllUsersGoldenPathTest  Time elapsed: 0.046 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <6>
+	at com.sg.ChrisList.daos.UserDaoDBTest.getAllUsersGoldenPathTest(UserDaoDBTest.java:110)
+
+createUserGoldenPathTest  Time elapsed: 0.013 s  <<< ERROR!
+com.sg.ChrisList.daos.DaoException: Cannot add an incomplete user. All requires fields must have a non-null value.
+	at com.sg.ChrisList.daos.UserDaoDBTest.createUserGoldenPathTest(UserDaoDBTest.java:73)
+

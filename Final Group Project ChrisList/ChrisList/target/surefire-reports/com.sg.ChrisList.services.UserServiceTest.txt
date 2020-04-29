@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.ChrisList.services.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.043 s <<< FAILURE! - in com.sg.ChrisList.services.UserServiceTest
+testGetListingsByKeyword  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.services.UserServiceTest.testGetListingsByKeyword(UserServiceTest.java:188)
+
+testGetListingsByKeywordGoldenPath  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.services.UserServiceTest.testGetListingsByKeywordGoldenPath(UserServiceTest.java:157)
+
+GetListingsByKeyword  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.sg.ChrisList.services.UserServiceTest.GetListingsByKeyword(UserServiceTest.java:124)
+

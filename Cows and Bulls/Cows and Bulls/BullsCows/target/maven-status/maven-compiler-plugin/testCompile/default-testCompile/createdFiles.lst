@@ -1,0 +1,3 @@
+com\mycompany\bullscows\Service\BullsCowsServiceTest.class
+com\mycompany\bullscows\dao\GameTemplateInMem.class
+com\mycompany\bullscows\dao\GuessTemplateInMem.class
